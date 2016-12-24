@@ -4,6 +4,21 @@ from bson import json_util, ObjectId
 
 mod_main = Blueprint('main', __name__)
 
+def index():
+
+	db = mongo.db.form_data
+
+	if request.method == 'GET':
+		return render_template('index.html')
+	elif request.method == 'POST':
+		data = request.form.to_dict()
+		db.insert(data)
+		# db = mongo.db.arkep.insert(request.form.to_dict())
+		return render_template('index.html')
+	else:
+                return "Bad Request"
+
+
 @mod_main.route('/', methods=['GET','POST'])
 def index():
     db = mongo.db.arkep
