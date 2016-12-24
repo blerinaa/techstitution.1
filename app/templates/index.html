@@ -1,0 +1,423 @@
+{% extends "layout.html" %}
+{% block header %}
+
+<h1 align="center">Formular i njoftimit p&euml;r hyrje n&euml; aktivitetin e komunikimeve elektronike</h1>
+
+{% endblock %}
+
+{% block content %}
+
+
+<form method="POST" id="formulari">
+
+<div>
+ <fieldset>
+  <legend>I.*Q&Euml;LLIMI I NJOFTIMIT:</legend>
+     <label for="fillimi_sherbimit" class="pure-checkbox">
+      <input id="fillimi_sherbimit" type="checkbox" name="Fillimi_sherbimit" class="validate">
+            Fillimi i sh&euml;rbimit
+     </label>
+<br>
+     <label for="shtim_sherbimit" class="pure-checkbox">
+      <input id="shtim_sherbimit" type="checkbox" name="shtim_sherbimit" class="validate">
+            Shtimi i sh&euml;rbimit
+     </label>
+ <br>
+     <label for="heqje_sherbimit" class="pure-checkbox">
+      <input id="heqje_sherbimit" type="checkbox" name="Heqje_sherbimit" class="validate">
+            Heqje e sh&euml;rbimit
+     </label>
+ </fieldset>
+</div>
+
+<br>
+
+<div>
+ <fieldset>
+  <legend>II.T&Euml; DH&Euml;NAT P&Euml;R ND&Euml;RRMARR&Euml;SIN</legend>
+   <table width="100%">
+<tr><td><div>
+         <label class="active" data-error="Emri eshte gabim!">1.1 Emri i Ndermarresit(Entiteti)</label></td><td>
+          <input id="Entiteti" type="text" name="Entiteti" class="validate" required>
+        </div></th></tr>
+<tr><td><div>
+         <label class="active" data-error="Numri eshte gabim!">1.2 Numri i Regjistrimit te Biznesit</label></td><td>
+          <input id="NumriRegjistrimitBiznesit" type="number" name="NumriRegjistrimitBiznesit" class="validate" required>
+        </div></td></tr>
+<tr><td><div>
+         <label class="active" data-error="Numri eshte gabim!">1.3 Numri fiskal</label></td><td>
+          <input id="NumriFiskal" type="number" name="NumriFiskal" class="validate" required>
+        </div></td></tr>
+<tr><td><div>
+          <label class="active" data-error="Adresa eshte gabim!" >1.4 Adresa</label></td><td>
+           <input id="Adresa" type="text" name="Adresa" class="validate" required>
+        </div></td></tr>
+<tr><td><div>
+         <label class="active" data-error="Numri eshte gabim!">1.5 Numri i Telefonit</label></td><td>
+          <input id="NumriTelefonit" type="number" name="NumriTelefonit" class="validate" required>
+        </div></td></tr>
+<tr><td><div>
+          <label class="active" data-error="Numri eshte gabim!">1.6 Numri Faksit</label></td><td>
+           <input id="NumriFaksit" type="number" name="NumriFaksit"class="validate">
+        </div></td></tr>
+<tr><td><div>
+          <label data-error="E-mail eshte gabim!" class="active">1.7 E-mail adresa</label></td><td>
+           <input id="Email" type="email" name="EmailAdresa" class="validate" required>
+        </div></td></tr>
+   </table>
+ </fieldset>
+</div>
+
+<br>
+
+<div>
+ <fieldset>
+  <legend>III. T&Euml; DH&Euml;NA P&Euml;R ZYRTARIN LIGJ&Euml;RISHT T&Euml; P&Euml;RGJEGJ&Euml;SH&Euml;M</legend>
+   <table width="100%">
+<tr><td><div>
+          <label class="active" data-error="Emri eshte gabim!">2.1 Emri i Zyrtarit</label></td><td>
+           <input id="EmriZyrtarit" type="text" name="EmriZyrtarit" class="validate" required>
+        </div></td></tr>
+<tr><td><div>
+          <label class="active" data-error="Emri eshte gabim!">2.2 Adresa</label></td><td>
+           <input id="AdresaZyrtarit" type="text" name="AdresaZyrtarit" class="validate" required>
+        </div></td></tr>
+<tr><td><div>
+          <label class="active" data-error="Numri eshte gabim!" data-success="Sukses!">2.3 Numri i Telefonit</label></td><td>
+           <input id="NumriTelefonitZyrtarit" type="number" name="NumriTelefonitZyrtarit" class="validate" required>
+        </div></td></tr>
+<tr><td><div>
+          <label class="active" data-error="Numri eshte gabim!" data-success="Sukses!">2.4 Numri i Faksit</label></label></td><td>
+           <input id="NumriFaksitZyrtarit" type="number" name="NumriFaksitZyrtarit" class="validate">
+        </div></td></tr>
+<tr><td><div>
+          <label for="email1" data-error="E-mail eshte gabim!" data-success="Sukses!" class="active">2.5 E-mail adresa</label></td><td>
+           <input placeholder="" id="EmailZyrtarit" name="EmailZyrtarit" type="email" class="validate"  required>
+        </div></td></tr>
+<tr><td><div>
+          <label class="active" data-error="Numri eshte gabim!" data-success="Sukses!">2.6 Numri i ID</label></td><td>
+           <input id="NumriIDZyrtarit" type="number" name="NumriIDZyrtarit" class="validate" required>
+        </div></td></tr>
+   </table>
+ </fieldset>
+</div>
+
+<br>
+
+<div>
+ <fieldset>
+  <legend>IV. AKTIVITETET TE CILAT NJOFTOHEN/CREGJISTROHEN:</legend>
+   <table>
+    <tr class="table-row">
+     <td>3.1 Ofrimi i rrjetit publik fiks</td>
+      <td class="tableData">
+
+      <div class="form-group">
+       <div class="checkbox">
+        <label>
+         <input type="checkbox" id="Lokal"class="validate">
+       Lokal
+        </label>
+       </div>
+      </div>
+
+      <div class="form-group">
+       <div class="checkbox">
+        <label>
+         <input type="checkbox" id="Nacional" class="validate">
+       Nacional
+        </label>
+       </div>
+      </div>
+
+      <div class="form-group">
+       <div class="checkbox">
+        <label>
+         <input type="checkbox" id="Tjera" class="validate">
+     Tjera
+        </label>
+       </div>
+      </div>
+
+         <input placeholder="Specifiko" type="text" name="Specifiko" id="Specifiko" class="validate">
+      </td>
+    </tr>
+
+    <tr class="table-row">
+     <td>3.2 Ofrimi i sh&euml;rbimeve publike fikse</td>
+      <td class="tableData">
+
+      <div class="form-group">
+       <div class="checkbox">
+        <label>
+         <input type="checkbox" id="Sherbime-telefonike-lokale" class="validate" >
+       Sh&euml;rbime telefonike lokale/nacionale
+        </label>
+       </div>
+      </div>
+
+      <div class="form-group">
+       <div class="checkbox">
+        <label>
+         <input type="checkbox" id="Sherbimin-nderkombetar-telefonik" class="validate">
+       Sh&euml;rbime telefonike nd&euml;rkomb&euml;tare
+        </label>
+       </div>
+      </div>
+
+      <div class="form-group">
+       <div class="checkbox">
+        <label>
+         <input type="checkbox" id="Sherbime-tjera" class="validate" >
+       Sh&euml;rbime tjera:
+        </label>
+       </div>
+      </div>
+
+         <input placeholder="Specifiko" type="text" name="Specifiko-2" id="Specifiko-2"class="validate">
+     </td>
+    </tr>
+
+    <tr class="table-row">
+    <td>3.3 Ofrimi i rrjetit publik mobil</td>
+     <td class="tableData">
+
+      <div class="form-group">
+       <div class="checkbox">
+        <label>
+         <input type="checkbox" id="Lokal_2" class="validate">
+        Lokal
+        </label>
+       </div>
+      </div>
+
+      <div class="form-group">
+       <div class="checkbox">
+        <label>
+         <input type="checkbox" id="Nacional_2" class="validate">
+       Nacional
+        </label>
+       </div>
+      </div>
+
+     </td>
+    </tr>
+
+    <tr class="table-row">
+     <td>3.4 Ofrimi i sh&euml;rbimeve publike mobile</td>
+     <td class="tableData">
+
+      <div class="form-group">
+       <div class="checkbox">
+        <label>
+         <input type="checkbox" id="Sherbime-telefonike-zerit"class="validate">
+        Sh&euml;rbime telefonike t&euml; z&euml;rit
+        </label>
+       </div>
+      </div>
+
+      <div class="form-group">
+       <div class="checkbox">
+        <label>
+         <input type="checkbox" id="Transmetim-tedhenash"class="validate">
+        Transmetim t&euml; dh&euml;nash
+        </label>
+       </div>
+      </div>
+
+     </td>
+    </tr>
+
+    <tr class="table-row">
+     <td>3.5 Ofrimi i sh&euml;rbimeve t&euml; linjave me qira</td>
+     <td class="tableData">
+
+      <div class="form-group">
+       <div class="checkbox">
+        <label>
+         <input type="checkbox" id="Fiber-optik-pandricuar" class="validate">
+         Fib&euml;r optik t&euml; pandri&ccedil;uar
+        </label>
+       </div>
+      </div>
+
+      <div class="form-group">
+       <div class="checkbox">
+        <label>
+         <input type="checkbox" id="Linja-tjera-me-qira"class="validate">
+        Linja tjera me qira
+        </la1bel>
+       </div>
+      </div>
+
+     </td>
+    </tr>
+
+    <tr class="table-row">
+     <td>3.6 Ofrimi i rrjetave publike me transmetim satelitor</td>
+     <td class="tableData">
+
+      <div class="form-group">
+       <div class="checkbox">
+        <label>
+         <input type="checkbox" id="Ofrimi-rrjetave-transmetim-satelitor" class="validate">
+         Ofrimi i rrjetave publike me transmetim satelitor
+        </label>
+       </div>
+      </div>
+
+     </td>
+    </tr>
+
+    <tr class="table-row">
+     <td>3.7 Ofrimi i sh&euml;rbimeve publike satelitore</td>
+     <td class="tableData">
+      <div class="form-group">
+       <div class="checkbox">
+        <label>
+         <input type="checkbox" id="Ofrimi-sherbimeve-satelitor"class="validate">
+           Ofrimi i sh&euml;rbimeve publike satelitore
+        </label>
+       </div>
+      </div>
+
+     </td>
+    </tr>
+
+    <tr class="table-row">
+     <td>3.8 Ofrimi i sh&euml;rbimeve t&euml; transmetimit t&euml; t&euml; dh&euml;nave (Internetit)</td>
+     <td class="tableData">
+
+      <div class="form-group">
+       <div class="checkbox">
+        <label>
+         <input type="checkbox" id="Ofrimi-sherbimeve-transmetimit-tedhenave" class="validate">
+             Ofrimi i sh&euml;rbimeve publike t&euml; transmetimit t&euml; t&euml; dh&euml;nave(internetit)
+        </label>
+       </div>
+      </div>
+
+     </td>
+    </tr>
+
+    <tr class="table-row">
+     <td>3.9 Ofrimi i sh&euml;rbimeve me vler&euml; t&euml; shtuar</td>
+     <td class="tableData">
+
+      <div class="form-group">
+       <div class="checkbox">
+        <label>
+         <input type="checkbox" id="Ofrimi-sherbimeve-vlere-teshtuar" class="validate">
+          Ofrimi i sh&euml;rbimeve me vler&euml; t&euml; shtuar
+        </label>
+       </div>
+      </div>
+
+     </td>
+    </tr>
+
+   </table>
+ </fieldset>
+</div>
+
+<br>
+
+<div>
+ <fieldset>
+  <legend>V.*P&Euml;RSHKRIMI I AKTIVITETIT DHE FAZA E OFRIMIT:</legend>
+   <table style="width:100%">
+
+  <tr><td>P&euml;rshkrimi i rrjetit dhe/ose sh&euml;rbimit q&euml; do t&euml; ofrohet:
+         (T&euml; jepen p&euml;rshkrime t&euml; detajuara p&euml;r secilin aktivitet t&euml; njoftuar duke specifikuar:
+   <ul> <li>A do t&euml; p&euml;rdoret rrjeti vetanak apo ndonj&euml; rrjet tjet&euml;r, </li>
+        <li>Teknologjia e cila do t&euml; p&euml;rdoret,</li>
+        <li>Radio frekuencat, t&euml; cilat planifikohen t&euml; p&euml;rdor&euml;n</li>
+        <li>Lista e sherbimeve qe planifikohen te ofrohen,</li>
+        <li>Etj.</li></ul>
+        Mund t&euml; p&euml;rdoret ndonj&euml; shtojce e ve&ccedil;ante n&euml; rast se hap&euml;sira nuk &euml;sht&euml; e mjaftueshme):</td><td>  <textarea name="Pershkrimi_rrjetit" rows="20" cols="50"id="Pershkrimi_rrjetit" class="validate">Shto koment...</textarea></td></tr>
+  <tr><td>Faza e Ofrimit
+        (T&euml; specifikohet koha e parashikuar p&euml;r fillimin e aktivitetit t&euml; komunikimeve elektronike):</td><td> <textarea name="Faza_ofrimit" rows="5" cols="50"id="Faza_ofrimit" class="validate">Shto koment...</textarea></td></tr></p1>
+   </table>
+ </fieldset>
+</div>
+
+<br>
+
+<div>
+ <fieldset>
+  <legend>VI. *DOKUMENTET E BASHKANGJITURA</legend>
+   <ul>
+         <p1>Dokumentet e bashkangjitura si shtojc&euml; aplikacionit t&euml; Njoftimit:</p1>
+         <li>Kopje e &ccedil;ertifikat&euml;s s&euml; regjistrimit t&euml; biznesit</li>
+    <div class="file-field input-field">
+     <div class="btn">
+      <span>Ngarko</span>
+       <input type="file" class="validate" >
+     </div>
+    </div>
+
+         <li>Kopje e &ccedil;ertifikat&euml;s s&euml; numrit fiskal</li>
+    <div class="file-field input-field">
+     <div class="btn">
+      <span>Ngarko</span>
+       <input type="file" class="validate" >
+     </div>
+    </div>
+
+         <li>Kopje e dokumentit per Informat&euml; mbi biznesin</li></p1>
+    <div class="file-field input-field">
+     <div class="btn">
+      <span>Ngarko</span>
+       <input type="file" class="validate" >
+     </div>
+    </div>
+
+   </ul>
+ </fieldset>
+</div>
+
+<br>
+
+<div>
+ <fieldset>
+  <legend>VII. KONFIRMIMI I NJOFTIMIT</legend>
+    <p1>Ndermarrja kerkon qe ti leshohet certifikata e konfirmimit te njoftimit per ofrimin e rrjeteve dhe/ose sherbimeve publike te       komunikimeve  elektronike te njoftuara permes ketij formulari:
+
+      <div class="form-group">
+       <input name="6-PO" type="radio" id="Po" class="validate" />
+         <label for="Po">Po</label>
+<br>
+       <input name="6-JO" type="radio" id="Jo" class="validate" />
+        <label for="Jo">Jo</label>
+      </div>
+
+ </fieldset>
+</div>
+
+<br>
+
+<fieldset>
+ <legend>VIII. DETYRIMET LIGJORE</legend>
+  <table>
+
+<th><ul><li><p class="italic">Un&euml; n&euml;p&euml;rmjet k&euml;tij dokumenti deklaroj se do te ushtroj aktivitet ne fush&euml;n e komunikimeve elektronike t&euml; sh&euml;nuara m&euml; sip&euml;r dhe aplikoj p&euml;r regjistrim n&euml; regjistrin e ofrueseve t&euml; rrjeteve dhe sh&euml;rbimeve t&euml; komunikimeve elektronike t&euml; Autoritetit (ARKEP).</p></li>
+        <li><p class="italic">Un&euml; n&euml;p&euml;rmjet k&euml;tij dokumenti deklaroj se kam mbyllur aktivitetet e komunikimeve elektronike t&euml; sh&euml;nuara m&euml; sip&euml;r.</p></li>
+        <li><p class="italic">Un&euml; n&euml;p&euml;rmjet k&euml;tij dokumenti deklaroj se kam mbyllur &ccedil;do aktivitet t&euml; komunikimeve elektronike n&euml;n regjimin e Autorizimit t&euml; p&euml;rgjithsh&euml;m.</p></li>
+        <li><p class="italic">Un&euml; n&euml;p&euml;rmjet k&euml;tij dokumenti deklaroj se t&euml; dh&euml;nat e mia kan&euml; p&euml;suar ndryshime, sikurse p&euml;rshkruhen n&euml; formular.</p></li>
+        <li><p class="italic">Un&euml; n&euml;p&euml;rmjet k&euml;tij dokumenti deklaroj se kam ndryshuar form&euml;n ligjore t&euml; nd&euml;rmarrjes sime si&ccedil; p&euml;rshkruhet ne formular. Emri i vjeter eshte si me poshte.</p></li></ul>
+        <p class="italic">Un&euml; n&euml;p&euml;rmjet k&euml;tij dokumenti paraqes n&euml; ARKEP t&euml; gjith&euml; dokumentacionin e nevojsh&euml;m ligjor dhe/ose t&euml; gjith&euml; dokumentet q&euml; sigurojn&euml; se n&euml;nshkruesi i k&euml;tij Njoftimi Regjistrimi ka lidhje me personin p&euml;rfaq&euml;sues.</p>
+        <p class="italic">Un&euml; deklaroj se informacioni q&euml; perfshihet n&euml; deklarimin e paraqitur, sikurse &ccedil;do informacion tjet&euml;r shoq&euml;rues , &euml;sht&euml; i sakt&euml; dhe i v&euml;rtet&euml;, dhe jam plot&euml;sisht i vet&euml;dijshem p&euml;r faktin q&euml;, lidhur me angazhimin n&euml; &ccedil;do aktivitet t&euml; komunikimeve elektronike p&euml;r t&euml; cilin &euml;sht&euml; e nevojshme t&euml; sigurosh t&euml; drejt&euml;n e p&euml;rdorimit p&euml;r numeracion dhe frekuenca, t&euml; drejta t&euml; cilat nuk sigurohen n&euml;p&euml;rmjet k&euml;saj procedure, un&euml; duhet t&euml; paraqes nj&euml; aplikim p&euml;r t&euml; fituar t&euml; drejtat e p&euml;rdorimit t&euml; cituara m&euml; sip&euml;r p&euml;rpara fillimit t&euml; ofrimit t&euml; sh&euml;rbimit.</p></th>
+  </table>
+</fieldset>
+
+<br>
+
+<h6>*Operator&euml;t t&euml; Licencuar sipas Ligjit p&euml;r Telekomunikacion Nr.2002/7 nuk jan&euml; t&euml; obliguar q&euml; t&euml; plot&euml;sojn&euml; pik&euml;n I, V dhe VI t&euml; Formularit t&euml; Njoftimit.</h6>
+
+     <div style="text-align: center;">
+      <button type="submit" id="buttoni" method="POST">Submit</button>
+     </div>
+
+</form>
+
+{% endblock %}
